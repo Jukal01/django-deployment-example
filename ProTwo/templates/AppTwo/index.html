@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'AppTwo/base.html' %}
+    {% block body_block %}
+    <h1>Welcome!</h1>
+    <h2>Go to /users to see the list of users information</h2>
+    <!-- using filter. syntax for filter is value|filter:'parameter'-->
+    {{ my_entry|upper }}
+    <ul>
+        <li><a href='{% url 'AppTwo:user' %}'>user</a></li>
+        <li><a href='{% url 'AppTwo:help' %}'>help</a></li>
+        <li><a href='{% url 'AppTwo:signup' %}'>login</a></li>
+    </ul>
+    {% endblock %}
+
